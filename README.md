@@ -42,7 +42,6 @@ OIBSIP/
 
 ## Author
 **Sarsika Sri K**
-Oasis Infobyte SIP — Java Development Track
 
 ## Connect
 - Portfolio: sarsika.github.io/sarsika-sri-portfolio/
