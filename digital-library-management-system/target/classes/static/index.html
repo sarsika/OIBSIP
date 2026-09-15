@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Digital Library Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>📚 Digital Library</h1>
+
+    <!-- LOGIN SECTION -->
+    <div id="loginBox">
+        <h2>Login</h2>
+        <input type="email" id="loginEmail" placeholder="Email">
+        <input type="password" id="loginPassword" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <p>New here? <a href="#" onclick="showRegister()">Register</a></p>
+    </div>
+
+    <!-- REGISTER SECTION -->
+    <div id="registerBox" style="display:none">
+        <h2>Register</h2>
+        <input type="text" id="regName" placeholder="Full Name">
+        <input type="email" id="regEmail" placeholder="Email">
+        <input type="password" id="regPassword" placeholder="Password">
+        <button onclick="register()">Create Account</button>
+    </div>
+
+    <!-- MAIN APP (shown after login) -->
+    <div id="appBox" style="display:none">
+        <p id="welcomeText"></p>
+        <button onclick="logout()">Logout</button>
+
+        <hr>
+        <h2>Book Catalogue</h2>
+        <input type="text" id="searchBox" placeholder="Search by title or author" oninput="loadBooks()">
+        <div id="bookList"></div>
+
+        <hr>
+        <h2>My Issued Books</h2>
+        <div id="myBooks"></div>
+
+        <hr>
+        <h2>My Advance Bookings</h2>
+        <div id="myBookingsList"></div>
+
+        <hr>
+        <h2>Contact Admin</h2>
+        <textarea id="contactMsg" placeholder="Type your message..."></textarea>
+        <button onclick="sendMessage()">Send</button>
+
+        <!-- everything below this only shows up for ADMIN -->
+        <div id="adminSection" style="display:none">
+
+            <hr>
+            <h2>Manage Books (Admin)</h2>
+            <div id="manageBookList"></div>
+
+            <h3>Add New Book</h3>
+            <input type="text" id="newTitle" placeholder="Title">
+            <input type="text" id="newAuthor" placeholder="Author">
+            <input type="text" id="newIsbn" placeholder="ISBN">
+            <input type="text" id="newCategory" placeholder="Category">
+            <input type="number" id="newQty" placeholder="Quantity">
+            <button onclick="addBook()">Add Book</button>
+
+            <hr>
+            <h2>All Issued Books</h2>
+            <div id="issuedBooksList"></div>
+
+            <hr>
+            <h2>Registered Members</h2>
+            <div id="membersList"></div>
+
+            <hr>
+            <h2>Fine Management</h2>
+            <div id="finesList"></div>
+
+            <hr>
+            <h2>Messages from Users</h2>
+            <div id="adminMessagesList"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
